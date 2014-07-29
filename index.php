@@ -14,7 +14,7 @@ $logo			 	= new Content();
 $headerContent	 	= new Content();
 $contentContainer 	= new Content();
 $content			= new Content();
-$sideBar			= new Content();
+//$sideBar			= new Content();
 $footerContainer	= new Content();
 $footerContent		= new Content();
 
@@ -25,7 +25,7 @@ $logo->newBlock("logo");
 $headerContent->newBlock("headerContent");
 $contentContainer->newBlock("contentContainer");
 $content->newBlock("content");
-$sideBar->newBlock("sideBar");
+//$sideBar->newBlock("sideBar");
 $footerContainer->newBlock("footerContainer");
 $footerContent->newBlock("footerContent");
 
@@ -35,12 +35,16 @@ $TylorFaoro->addCSS("style.css");
 //:: Declare Javascript
 $TylorFaoro->addJS("script.js");
 
+//:: Add custom Logic
+$logo->add( "<h1>LOGO HERE</h1>" );
+$headerContent->add( drawHeader() );
+
 //:: Nest content blocks
 $headerContainer->add( $logo->buildBlock() );
 $headerContainer->add( $headerContent->buildBlock() );
 
 $contentContainer->add( $content->buildBlock() );
-$contentContainer->add( $sideBar->buildBlock() );
+//$contentContainer->add( $sideBar->buildBlock() );
 
 $footerContainer->add( $footerContent->buildBlock() );
 
@@ -71,4 +75,4 @@ echo $TylorFaoro->endPage();
 
 
 
-
+?>
