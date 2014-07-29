@@ -30,7 +30,7 @@ include_once "include/content.class.php";
 include_once "include/navigation.class.php";
 require_once "include/database.class.php";
 include_once "include/authentication.class.php";
-include_once "include/testimonials.class.php";
+//include_once "include/testimonials.class.php";
 include_once "include/fileManager.class.php";
 //include_once "include/image.class.php";
 
