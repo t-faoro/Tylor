@@ -12,43 +12,48 @@ body{
 div#container{
 	width: 100%;
 	height: 100%;
+	background:url(../images/micro_carbon_@2X.png);	
 	
 }
 
 div#headerContainer{
 	position: relative;
 	width: 100%;
-	background: #000;
-	min-height: 125px;
+	/*background:url(../images/micro_carbon.png);*/
+	min-height: 225px;
+	border: 1px solid #333;
 }
 
 div#contentContainer{
 	position: relative;
 	width: 100%;
-	min-height: 500px;
-	background: lime;
+	min-height: 600px;
+	background:url(../images/micro_carbon.png);
 	
 }
 
 div#content{
+	margin: 0 auto;
 	position: relative;
-	float: right;
-	width: 75%;
-	min-height: 500px;
-	background: red;
+	width: 1000px;
+	min-height: 600px;
+	background:url(../images/micro_carbon_@2X.png);
+	/*box-shadow: 25px 0px 124px #333;*/
+	border: 1px solid #333;
 }
 
-div#sideBar{
+/*div#sideBar{
 	position: relative;
 	float: left;
 	background: blue;
 	width: 25%;
 	min-height: 500px;
-}
+}*/
 
 div#footerContainer{
 	position: relative;
 	width: 100%;
-	background: lime;
-	min-height: 125px;
+	/*background:url(../images/micro_carbon.png);*/
+	min-height: 225px;
+	border: 1px solid #333;
 }
