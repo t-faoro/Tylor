@@ -19,7 +19,7 @@ define(DOCTYPE, "<!DOCTYPE html>");
 define(TITLE, "Tylor Faoro - Website Developer");
 define(ADMIN_TITLE, "Administration Page");
 
-define(FACEBOOK, "https://www.facebook.com/ElegantWeddingsEventsLethbridge");
+define(FACEBOOK, "https://www.facebook.com/tfaoro");
 define(TWITTER, "https://twitter.com/TylorFaoro");
 
 
@@ -30,12 +30,12 @@ include_once "include/content.class.php";
 include_once "include/navigation.class.php";
 require_once "include/database.class.php";
 include_once "include/authentication.class.php";
-//include_once "include/testimonials.class.php";
+
 include_once "include/fileManager.class.php";
 //include_once "include/image.class.php";
 
 //:: Other Includes
-
+include_once "functions/page.functions.php"
 
 //:: Misc. Functions
 

@@ -35,6 +35,10 @@ $TylorFaoro->addCSS("style.css");
 //:: Declare Javascript
 $TylorFaoro->addJS("script.js");
 
+//:: Add custom Logic
+$logo->add( "<h1>LOGO HERE</h1>" );
+$headerContent->add( drawHeader() );
+
 //:: Nest content blocks
 $headerContainer->add( $logo->buildBlock() );
 $headerContainer->add( $headerContent->buildBlock() );
@@ -71,4 +75,4 @@ echo $TylorFaoro->endPage();
 
 
 
-
+?>
