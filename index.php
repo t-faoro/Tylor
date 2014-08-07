@@ -14,26 +14,32 @@ $logo			 	= new Content();
 $headerContent	 	= new Content();
 $contentContainer 	= new Content();
 $content			= new Content();
+$mainNav			= new Content();
 //$sideBar			= new Content();
 $footerContainer	= new Content();
 $footerContent		= new Content();
-
-//:: Instantiate Content Blocks
-$siteContainer->newBlock("container");
-$headerContainer->newBlock("headerContainer");
-$logo->newBlock("logo");
-$headerContent->newBlock("headerContent");
-$contentContainer->newBlock("contentContainer");
-$content->newBlock("content");
-//$sideBar->newBlock("sideBar");
-$footerContainer->newBlock("footerContainer");
-$footerContent->newBlock("footerContent");
 
 //:: Declare Stylesheets
 $TylorFaoro->addCSS("style.css");
 
 //:: Declare Javascript
 $TylorFaoro->addJS("script.js");
+
+//:: Instantiate Content Blocks
+$siteContainer->newBlock("container");
+$headerContainer->newBlock("headerContainer");
+$logo->newBlock("logo");
+$mainNav->newBlock("mainNav");
+$headerContent->newBlock("headerContent");
+$contentContainer->newBlock("contentContainer");
+$content->newBlock("content");
+$footerContainer->newBlock("footerContainer");
+$footerContent->newBlock("footerContent");
+
+//:: Instantiate Site Navigations.
+$mainNav->add( $nav->buildNav() );
+
+
 
 //:: Add custom Logic
 $logo->add( "<h1>LOGO HERE</h1>" );
@@ -50,6 +56,7 @@ $footerContainer->add( $footerContent->buildBlock() );
 
 //:: Wrap Nested content blocks
 $siteContainer->add( $headerContainer->buildBlock() );
+$siteContainer->add( $mainNav->buildBlock() );
 $siteContainer->add( $contentContainer->buildBlock() );
 $siteContainer->add( $footerContainer->buildBlock() );
 
