@@ -6,6 +6,7 @@ require_once "config.php";
 $TylorFaoro = new Layout();
 $DB = new Database();
 $nav = new Navigation("mainNav", "navigation");
+$Nigma = new Enigma();
 
 //:: Declare Content Blocks
 $siteContainer   	= new Content();
@@ -48,6 +49,8 @@ $headerContent->add( drawHeader() );
 //:: Nest content blocks
 $headerContainer->add( $logo->buildBlock() );
 $headerContainer->add( $headerContent->buildBlock() );
+
+$content->add( $Nigma->drawHeading() );
 
 $contentContainer->add( $content->buildBlock() );
 //$contentContainer->add( $sideBar->buildBlock() );
