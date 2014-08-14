@@ -14,9 +14,7 @@ class Enigma extends Database{
 		$sql .= 'FROM	page ';
 		$sql .= 'WHERE 	pageID = '.$this->pageValue.' ';
 		
-		$result = $this->executeQuery( $sql );
-		
-		
+		$result = $this->executeQuery( $sql );		
 		
 		foreach($result as $x){
 			$this->pageHeader = $x['pageHeader'];
